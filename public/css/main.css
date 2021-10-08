@@ -1,0 +1,739 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: Quicksand, sans-serif;
+    font-weight: 200;
+    background-color: #fffffff1;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: Quicksand, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    transition: .4s;
+}
+
+::selection
+{
+    color:white;
+    background: #11D100;  
+}
+
+input, a, textarea, select, button {outline-style:none; -webkit-appearance: none;}
+
+.green{
+    color: #11D100;
+    font-weight: bold;
+}
+
+/* topBox */
+.topBox{
+    width: 100%;
+    height: 130px;
+    display: flex;
+}
+.topBox .left{
+    width: 50%;
+}
+.topBox .left img{
+    max-height: 40%;
+    max-width: 40%;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.topBox .right{
+    width: 50%;
+}
+.topBox .right button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: #11D100;
+    color: white;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: calc(100% - 170px);
+    cursor: pointer;
+}
+
+/* bodyBox */
+.bodyBox{
+    width: 80%;
+    margin-left: 10%;
+}
+/*      content */
+.bodyBox .content{
+
+}
+.bodyBox .title{
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 60px;
+    margin-top: 0px;
+}
+
+.bodyBox .list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    grid-gap: 60px;
+    justify-content: left;
+    margin-bottom: 150px;
+}
+.bodyBox .list .element{
+    width: 100%;
+    height: 270px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    position: relative;
+    padding: 0;
+
+    transition: .4s;
+}
+.bodyBox .list .element:hover{
+    border: 2px solid #11D100;
+}
+.bodyBox .list .element:active{
+    transform: scale(0.97);
+}
+.bodyBox .list .element .foto{
+    border-radius: 38px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: calc(100% + 0px);
+    height: 82%;
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.bodyBox .list .element .name{
+    text-align: center;
+    font-size: 25px;
+}
+
+.bodyBox .listEco{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    grid-gap: 60px;
+    justify-content: left;
+    margin-bottom: 150px;
+}
+.bodyBox .listEco .element{
+    width: 100%;
+    height: 270px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    position: relative;
+    padding: 0;
+
+    transition: .4s;
+}
+.bodyBox .listEco .element:hover{
+    border: 2px solid #11D100;
+}
+.bodyBox .listEco .element:active{
+    transform: scale(0.97);
+}
+.bodyBox .listEco .element .foto{
+    border-radius: 38px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: calc(100% + 0px);
+    height: 72%;
+    background-color: rgb(226, 225, 225);
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.bodyBox .listEco .element .name{
+    text-align: center;
+    font-size: 22px;
+}
+.bodyBox .listEco .element .name p{
+    margin: 0;
+}
+.bodyBox .listEco .element .name .small{
+    font-size: 14px;
+}
+
+.infoBox .text{
+    width: 80%;
+    border: 1px solid #11D100;
+    border-radius: 20px;
+    height: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.moreInfoForm{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.moreInfoForm .inText{
+    width: 90%;
+    margin-left: 5%;
+    /* max-width: 100%;
+    min-width: 100%; */
+    margin-bottom: 8px;
+    border: 2px solid #f1f1f1;
+    border-radius: 30px;
+    height: 40px;
+    padding: 5px 20px 5px 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.moreInfoForm .submit{
+    width: 60%;
+    margin-left: 20%;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #11D100;
+    border-radius: 20px;
+}
+
+.moreInfoForm .submit:hover{
+    transform: scale(1.02);
+}
+
+.moreInfoForm .inText:focus{
+    border: 2px solid #f1f1f1;
+}
+
+/* footer */
+footer {
+    margin-top: 20px;
+}
+footer .line{
+    width: 100%;
+    height: 1px;
+    background-color: #11D100;
+}
+footer p{
+    margin-top: 0;
+    margin-bottom: 1px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.homePage{
+    padding: 0;
+}
+
+.homePage .top{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+}
+
+.homePage .top .left{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-sizing: border-box;
+}
+
+.homePage .top .left button{
+    width: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 3.2vh;
+    outline: 0;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+
+    transition: .4s;
+}
+
+.homePage .top .left button:hover{
+    border: 1px solid #11D100;
+    transform: scale(1.02);
+}
+
+.homePage .top .left img{
+    width: 50%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.homePage .top .left .quote{
+    font-size: 2.2vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.homePage .top .left .quoteAuthor{
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 14%;
+}
+
+.homePage .top .right{
+    width: 60%;
+    height: 100%;
+    background-image: url("https://server106109.nazwa.pl/ecomeet/photo/main.png");
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bodyBox .actionBox .photo{
+    width: 80%;
+    margin-left: 10%;
+    height: 40vh;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bodyBox .actionBox .info p{
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.bodyBox .actionBox .info button{
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    color: white;
+    background-color: #11D100;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.bodyBox .actionBox .moreInfo{
+    text-align: center;
+    font-weight: normal;
+}
+
+.bodyBox .actionBox .infoBox{
+    width: 70%;
+    margin-left: 15%;
+    border: 0.5px solid lightgray;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    transition: .4s;
+}
+
+.bodyBox .actionBox .infoBox:hover{
+    transform: scale(1.02);
+    border: 0.5px solid #11D100;
+}
+
+.bodyBox .actionBox .infoBox h1{
+    margin: 0;
+}
+
+.bodyBox .actionBox .infoBox p{
+    width: 94%;
+    margin-left: 3%;
+}
+
+.bodyBox .actionBox iframe{
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 30px;
+    height: 200px;
+}
+
+.bodyBox .actionBox .mapName{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+.loginContent .loginBox{
+    margin-top: 12%;
+    width: min(400px, 80%);
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-left: max(calc(50% - 200px), 10%);
+    border: 2px solid #11D100;
+}
+
+.loginContent .loginBox h1{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.loginContent .loginBox .inputText{
+    width: 90%;
+    height: 45px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 3px 20px 3px 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+.loginContent .loginBox .inputText:focus{
+    border: 3px solid #11D100;
+}
+
+.loginContent .loginBox .inputButton{
+    width: 70%;
+    height: 45px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.homePage .line{
+    height: 50vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+}
+
+.homePage .line .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.homePage .line .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.homePage .line .right .quote{
+    width: 70%;
+    margin-left: 15%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.homePage .line .left img{
+    max-width: 70%;
+    max-height: 70%;
+    margin: auto;
+}
+
+.error{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10vh;
+    margin-bottom: 67vh;
+}
+
+.actionBox .part{
+    border: 2px solid #f1f1f1;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.actionBox .part .inText{
+    width: 70%;
+    height: 30px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #f1f1f1;
+    transition: .4s;
+}
+
+.actionBox .part .inText:focus{
+    border: 1px solid #11D100;
+}
+
+.actionBox .part .inSub{
+    height: 30px;
+    background-color: #11D100;
+    border: none;
+    border-radius: 30px;
+    margin-top: 8px;
+    transition: .4s;
+}
+
+.actionBox .part .inSub:hover{
+    transform: scale(1.02);
+}
+
+.actionBox .part .inSub:active{
+    transform: scale(0.97);
+}
+
+.actionBox .part .inSub{
+    width: 60%;
+}
+
+.submit22{
+    width: 60%;
+    margin-top: 20px;
+    height: 30px;
+    border: none;
+    background-color: #11D100;
+    border-radius: 30px;
+    color: white;
+    transition: .4s;
+}
+
+.submit22:hover{
+    transform: scale(1.02);
+}
+
+.submit22:active{
+    transform: scale(0.97);
+}
+
+.homePage .small{
+    display: none;
+}
+
+.inkubator .photo{
+    width: 80%;
+    margin-left: 10%;
+    height: 40vh;
+    background-image: url("https://server106109.nazwa.pl/ecomeet/photo/inku.png");
+    display: flex;
+    align-items: center;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.inkubator .photo .iTitle{
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    color: white;
+    font-weight: normal;
+}
+
+.inkubator .iBox{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.inkubator .iBox h2{
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.inkubator .iBox .news{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #f1f1f1;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    max-height: 250px;
+    transition: .4s;
+}
+
+.inkubator .iBox .news:hover{
+    border: 1px solid #11D100;
+}
+
+.inkubator .iBox .news .left{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.inkubator .iBox .news .left img{
+    max-width: 90%;
+    max-height: 40%;
+    margin: auto;
+}
+
+.inkubator .iBox .news .right{
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    width: calc(100% - 300px);
+}
+
+.inkubator .iBox .news .right h1{
+    margin-top: 0;
+}
+
+.inkubator p{
+    font-size: 18px;
+}
+
+.inkubator .description{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.inkubator li{
+    width: 90%;
+    margin-left: 5%;
+}
+
+@media only screen and (max-width: 1234px) 
+{
+    .inkubator .iBox .news{
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    .inkubator .iBox .news{
+        display: block;
+        max-height: 1000px;
+    }
+    .inkubator .iBox .news .left{
+        display: none;
+    }
+    .inkubator .iBox .news .right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .inkubator .iBox .news .right h1{
+        font-size: 8vw;
+    }
+    .inkubator .description{
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+    .inkubator .iBox {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .inkubator .photo .iTitle{
+        font-size: 9vw;
+        
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) 
+{
+    .bodyBox{
+        width: calc(100% - 40px);
+        margin: 0;
+        margin-left: 20px;
+    }
+    .bodyBox .title{
+        font-size: 30px;
+    }
+    .homePage .top .right{
+        display: none;
+    }
+    .homePage .top .left{
+        width: 100%;
+    }
+    .homePage .line{
+        display: block;
+        height: auto;
+    }
+    .homePage .line .left{
+        width: 100%;
+    }
+    .homePage .line .right{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .homePage .line .right .quote{
+        font-size: 16px;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .homePage .big{
+        display: none;
+    }
+    .homePage .small{
+        display: block;
+    }
+    .homePage .top .left .quote{
+        font-size: 5.5vw;
+    }
+    .topBox .right button{
+        width: 98px;
+        margin-left: calc(100% - 128px);
+    }
+    .bodyBox .list .element{
+        height: 200px;
+    }
+    .bodyBox .listEco .element{
+        height: 200px;
+    }
+    .actionBox .part .inText{
+        margin-left: 0;
+        width: 72%;
+    }
+    .bodyBox .actionBox .infoBox{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .bodyBox .actionBox .infoBox h1{
+        font-size: 18px;
+    }
+    .bodyBox .actionBox .photo{
+        width: 100%;
+        margin-left: 0;
+    }
+    .bodyBox .actionBox .info button{
+        width: 100%;
+        margin-left: 0;
+    }
+    .actionBox .part{
+        width: 100%;
+        margin-left: 0;
+    }
+    .moreInfoForm{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) 
+{
+    .bodyBox .listEco .element .name p{
+        font-size: 5vw;
+    }
+}
